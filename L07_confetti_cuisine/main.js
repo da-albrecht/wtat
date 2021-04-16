@@ -25,6 +25,10 @@ router.get("/confetti_cuisine.js", (req, res) => {
     res.writeHead(httpStatus.OK, contentTypes.js);
     utils.getFile("public/js/confetti_cuisine.js", res);
 });
+router.get("/test.jpg", (req, res) => {
+    res.writeHead(httpStatus.OK, contentTypes.png);
+    utils.getFile("public/images/test.jpg", res);
+});
 http.createServer(router.handle).listen(port);
 console.log(`The server is listening on
     ➥ port number: ${port}`);
